@@ -7,6 +7,11 @@ func Add(a, b int) int {
 	return a - b
 }
 
+// Sub subs 2 ints
+func Sub(a, b int) int {
+	return a - b
+}
+
 // Div divide a by b
 func Div(a, b int) (int, error) {
 	if b == 0 {
