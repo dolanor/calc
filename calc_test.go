@@ -1,9 +1,7 @@
-package calc_test
+package terminacalc_test
 
 import (
 	"testing"
-
-	"github.com/dolanor/calc"
 )
 
 func TestAddOK(t *testing.T) {
@@ -16,7 +14,7 @@ func TestAddOK(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		got := calc.Add(c.a, c.b)
+		got := terminacalc.Add(c.a, c.b)
 		if got != c.expected {
 			t.Errorf("we expected %d but got %d", c.expected, got)
 		}
@@ -33,7 +31,7 @@ func TestDivOK(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		got, err := calc.Div(c.a, c.b)
+		got, err := terminacalc.Div(c.a, c.b)
 		if err != nil {
 			t.Errorf("got error %v", err)
 		}
@@ -54,7 +52,7 @@ func TestDivError(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		_, err := calc.Div(c.a, c.b)
+		_, err := terminacalc.Div(c.a, c.b)
 		if (err != nil) != c.gotErr {
 			t.Errorf("got error %v", err)
 		}
